@@ -2,8 +2,8 @@ mixin postInfo(item, isShowTag=true)
     .post-info
         != full_date(item.date, 'll')
         if item.from && (is_home() || is_post())
-            a.post-from(href=item.from target="_blank" title=item.from) 翻譯。原文網址
-        if(isShowTag)
+            a.post-from(href=item.from target="_blank" title=item.from)
+        if (isShowTag)
             +postTags(item)
 
 mixin postTags(item)
